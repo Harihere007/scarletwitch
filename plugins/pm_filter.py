@@ -61,7 +61,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] 🧚‍♂️ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -418,7 +418,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Auto Filter 🪄', callback_data='autofilter'),
             InlineKeyboardButton('Broadcast 🤎', callback_data='broadcast')
             ],[
-            InlineKeyboardButton('Batch 🗂', callback_data='autofilter')
+            InlineKeyboardButton('Batch 🗂', callback_data='autofilter'),
             InlineKeyboardButton('Connection 🖇', callback_data='coct'),
             InlineKeyboardButton('Others 🗃', callback_data='extra')
             ],[
